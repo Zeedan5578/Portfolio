@@ -101,7 +101,7 @@ function Home() {
           </div>
 
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-3">
-            <button className="bg-blue-700 text-white hover:bg-blue-900 cursor-pointer px-6 py-2 rounded-full font-semibold shadow-md hover:scale-105 transition-all duration-500 underline-none" onClick={()=>{ window.open('https://drive.google.com/file/d/1s3seIzGzWnJwnw3qdvyggCh-1uUAdHvP/view?usp=sharing','_blank')}}>
+            <button className="bg-blue-700 text-white hover:bg-blue-900 cursor-pointer px-6 py-2 rounded-full font-semibold shadow-md hover:scale-105 transition-all duration-500 underline-none" onClick={()=>{ window.open('https://drive.google.com/file/d/19KXyPihOHbZ8fmceANK_AVgsqq6IXA-L/view?usp=sharing','_blank')}}>
               View Resume
             </button>
           </div>
