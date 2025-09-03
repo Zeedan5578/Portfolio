@@ -21,16 +21,17 @@ const cardVariants = {
 };
 
 const ProjectCard = ({ project, isDark }) => (
-  <motion.div
-    variants={cardVariants}
-    initial="hidden"
-    animate="visible"
-    exit="exit"
-    transition={{ duration: 0.4 }}
-    className={`rounded-xl overflow-hidden shadow-lg ${
-      isDark ? "bg-gray-800" : "bg-gray-50"
-    } transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
-  >
+<motion.div
+  variants={cardVariants}
+  initial="hidden"
+  animate="visible"
+  exit="exit"
+  transition={{ duration: 0.15 }}
+  whileHover={{ scale: 1.02, boxShadow: "0 10px 20px rgba(0,0,0,0.2)", y: -5, }}
+  className={`rounded-xl overflow-hidden shadow-lg ${
+    isDark ? "bg-gray-800" : "bg-gray-50"
+  } transition-all duration-300`}
+>
     <div className="p-6 flex justify-center items-center flex-col">
       <h2
         className={`${
@@ -337,4 +338,3 @@ const Project = () => {
 };
 
 export default Project;
-
