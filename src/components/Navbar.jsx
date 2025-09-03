@@ -30,7 +30,7 @@ const Navbar = () => {
       `}
     >
       <div className="w-full max-w-4xl flex justify-center items-center relative">
-        {/* Hamburger button */}
+        
         <button
           className={`md:hidden flex flex-col justify-between w-6 h-5 z-50 focus:outline-none absolute left-4 ${
             isOpen ? 'fixed left-6' : ''
@@ -43,7 +43,7 @@ const Navbar = () => {
           <span className={`block h-0.5 w-full ${isDark ? 'bg-white' : 'bg-black'} transition-all ${isOpen ? 'transform -translate-y-2 -rotate-45' : ''}`}></span>
         </button>
 
-        {/* Navigation links */}
+        
         <ul
           className={`
             ${isDark?'bg-slate-50/60': 'bg-transparent/80'} md:bg-transparent
@@ -80,7 +80,7 @@ const Navbar = () => {
             </li>
           ))}
 
-          {/* Theme Toggle Icon */}
+          
           <li className="mb-8 md:mb-0">
             <button
               onClick={toggleTheme}

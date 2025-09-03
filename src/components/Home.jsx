@@ -107,7 +107,6 @@ function Home() {
           </div>
         </div>
 
-        {/* Profile Image */}
         <div className="w-auto md:w-1/2 flex justify-center flex-2">
           <img
             src={profile}

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+
 import znews from "../assets/Znews.png"
 import carehut from "../assets/CareHut.png";
 import foodian from "../assets/Foodian.png"
@@ -12,9 +14,19 @@ import weather from "../assets/Weather.png"
 import todoz from "../assets/TodoZ.png"
 import zbgrem from "../assets/ZbgRem.png"
 
-// Reusable Project Card Component
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: -30 },
+};
+
 const ProjectCard = ({ project, isDark }) => (
-  <div
+  <motion.div
+    variants={cardVariants}
+    initial="hidden"
+    animate="visible"
+    exit="exit"
+    transition={{ duration: 0.4 }}
     className={`rounded-xl overflow-hidden shadow-lg ${
       isDark ? "bg-gray-800" : "bg-gray-50"
     } transition-all duration-300 hover:shadow-xl hover:-translate-y-1`}
@@ -74,8 +86,9 @@ const ProjectCard = ({ project, isDark }) => (
         </a>
       </div>
     </div>
-  </div>
+  </motion.div>
 );
+
 
 const Project = () => {
   const [showAll, setShowAll] = useState(false);
@@ -247,25 +260,28 @@ const Project = () => {
     },
   ];
 
-  return (
-    <>
-      <div
-        className={`${
-          isDark
-            ? "bg-gradient-to-br  from-gray-800 via-zinc-900 to-black"
-            : "bg-gradient-to-br  from-gray-400 via-zinc-200 to-white/80"
-        } py-12 px-4 sm:px-6 min-h-screen`}
-      >
-        <div className="max-w-7xl mx-auto">
-          <h1
-            className={`text-center font-bold ${
-              isDark ? "text-white" : "text-zinc-900"
-            } mb-5`}
-          >
-            Projects
-          </h1>
+   return (
+    <div
+      className={`${
+        isDark
+          ? "bg-gradient-to-br from-gray-800 via-zinc-900 to-black"
+          : "bg-gradient-to-br from-gray-400 via-zinc-200 to-white/80"
+      } py-12 px-4 sm:px-6 min-h-screen`}
+    >
+      <div className="max-w-7xl mx-auto">
+        <h1
+          className={`text-center font-bold ${
+            isDark ? "text-white" : "text-zinc-900"
+          } mb-5`}
+        >
+          Projects
+        </h1>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <AnimatePresence>
+          <motion.div
+            layout
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
+          >
             {projects.map((project, index) => (
               <ProjectCard
                 key={`main-${index}`}
@@ -273,23 +289,36 @@ const Project = () => {
                 isDark={isDark}
               />
             ))}
-          </div>
+          </motion.div>
+        </AnimatePresence>
 
-          {extraProjects.length > 0 && (
-            <div className="mt-16 text-center">
-              <button
-                onClick={() => setShowAll(!showAll)}
-                className={`px-6 py-3 rounded-lg font-medium ${
-                  isDark
-                    ? "bg-blue-600 hover:bg-blue-700"
-                    : "bg-blue-500 hover:bg-blue-600"
-                } text-white transition-colors`}
-              >
-                {showAll ? "Show Less" : "Show More Projects"}
-              </button>
+        {extraProjects.length > 0 && (
+          <div className="mt-16 text-center">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className={`px-6 py-3 rounded-lg font-medium ${
+                isDark
+                  ? "bg-blue-600 hover:bg-blue-700"
+                  : "bg-blue-500 hover:bg-blue-600"
+              } text-white transition-colors`}
+            >
+              {showAll ? "Show Less" : "Show More Projects"}
+            </button>
 
+            <AnimatePresence>
               {showAll && (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <motion.div
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  variants={{
+                    hidden: { opacity: 0, y: 30 },
+                    visible: { opacity: 1, y: 0 },
+                    exit: { opacity: 0, y: -30 },
+                  }}
+                  transition={{ duration: 0.5 }}
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
+                >
                   {extraProjects.map((project, index) => (
                     <ProjectCard
                       key={`extra-${index}`}
@@ -297,14 +326,15 @@ const Project = () => {
                       isDark={isDark}
                     />
                   ))}
-                </div>
+                </motion.div>
               )}
-            </div>
-          )}
-        </div>
+            </AnimatePresence>
+          </div>
+        )}
       </div>
-    </>
+    </div>
   );
 };
 
 export default Project;
+
