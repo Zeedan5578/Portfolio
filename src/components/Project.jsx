@@ -111,8 +111,8 @@ const Project = () => {
         { name: "Google's Map API" },
       ],
       links: {
-        github: "https://github.com/Lunatic5578/Carehut",
-        live: "https://lunatic5578.github.io/Carehut/carehut.html",
+        github: "https://github.com/zeedan5578/Carehut",
+        live: "https://zeedan5578.github.io/Carehut/carehut.html",
       },
     },
     {
@@ -126,7 +126,7 @@ const Project = () => {
         { name: "Local Storage Management" },
       ],
       links: {
-        github: "https://github.com/Lunatic5578/ToDo_WebApp",
+        github: "https://github.com/zeedan5578/ToDo_WebApp",
         live: "https://main--todoreactz.netlify.app/",
       },
     },
@@ -142,8 +142,8 @@ const Project = () => {
         { name: "BootStrap" },
       ],
       links: {
-        github: "https://github.com/Lunatic5578/Weather_WebApp",
-        live: "https://lunatic5578.github.io/Weather_WebApp/",
+        github: "https://github.com/zeedan5578/Weather_WebApp",
+        live: "https://zeedan5578.github.io/Weather_WebApp/",
       },
     },
     {
@@ -152,7 +152,7 @@ const Project = () => {
       image: passgen,
       techStack: [{ name: "React.js" }, { name: "TailWindCSS" }],
       links: {
-        github: "https://github.com/Lunatic5578/Password_Generator",
+        github: "https://github.com/zeedan5578/Password_Generator",
         live: "https://passgeneratorz.netlify.app/",
       },
     },
@@ -167,7 +167,7 @@ const Project = () => {
         { name: "API Handling" },
       ],
       links: {
-        github: "https://github.com/Lunatic5578/Z-news",
+        github: "https://github.com/zeedan5578/Z-news",
         live: "https://z-news-xi.vercel.app/",
       },
     },
@@ -178,8 +178,8 @@ const Project = () => {
       image: foodian,
       techStack: [{ name: "HTML" }, { name: "CSS" }],
       links: {
-        github: "https://github.com/Lunatic5578/Foodian",
-        live: "https://lunatic5578.github.io/Foodian/",
+        github: "https://github.com/zeedan5578/Foodian",
+        live: "https://zeedan5578.github.io/Foodian/",
       },
     },
   ];
@@ -200,7 +200,7 @@ const Project = () => {
         { name: "Render" },
       ],
       links: {
-        github: "https://github.com/Lunatic4755/Poslyzer",
+        github: "https://github.com/zeedan4755/Poslyzer",
         live: "https://poslyzer.vercel.app/",
       },
     },
@@ -218,7 +218,7 @@ const Project = () => {
         { name: "Tailwind CSS" },
       ],
       links: {
-        github: "https://github.com/Lunatic5578/ZBG-Remover",
+        github: "https://github.com/zeedan5578/ZBG-Remover",
         live: "https://zbg-remover.vercel.app/",
       },
     },
@@ -236,7 +236,7 @@ const Project = () => {
         { name: "Render" },
       ],
       links: {
-        github: "https://github.com/Lunatic5578/PassMan",
+        github: "https://github.com/zeedan5578/PassMan",
         live: "https://passman-otc4.onrender.com/",
       },
     },
@@ -255,7 +255,7 @@ const Project = () => {
         { name: "Render" },
       ],
       links: {
-        github: "https://github.com/Lunatic5578/MernAuth",
+        github: "https://github.com/zeedan5578/MernAuth",
         live: "https://mernauth-k6gh.onrender.com/",
       },
     },

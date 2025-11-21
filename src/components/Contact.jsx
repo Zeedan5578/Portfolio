@@ -97,7 +97,7 @@ const Contact = () => {
                         className="flex flex-col items-center"
                     >
                         <motion.a
-                            href="https://github.com/Lunatic5578"
+                            href="https://github.com/zeedan5578"
                             target="_blank"
                             rel="noopener noreferrer"
                             variants={buttonVariants}
